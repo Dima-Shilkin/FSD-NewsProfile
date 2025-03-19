@@ -11,7 +11,7 @@ import { FormData, Status } from "@/shared/interfaces";
 import Loader from "@/shared/ui/Loader/Loader";
 import { IncorrectData } from "@/shared/ui/IncorrectData/IncorrectData";
 import { WeatherCard } from "@/entities/weather";
-import { LastRequestCards } from "@/features/LastRequestCards/LastRequestCards";
+import { LastRequestCards } from "@/widgets/ui/LastRequestCards/LastRequestCards";
 
 export const Weather = () => {
   const dispatch = useDispatch<AppDispatch>();

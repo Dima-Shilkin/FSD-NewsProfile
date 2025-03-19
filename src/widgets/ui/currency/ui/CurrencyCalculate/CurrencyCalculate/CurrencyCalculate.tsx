@@ -13,8 +13,8 @@ import {
 import toast from "react-hot-toast";
 import { Status } from "@/shared/interfaces";
 import Loader from "@/shared/ui/Loader/Loader";
-import { Input } from "@/shared/ui/Input/Input";
-import { SelectS } from "@/shared/ui/SelectS/SelectS";
+import { CurrencyForm } from "../CurrencyForm/CurrencyForm";
+import { CurrencyResult } from "../CurrencyResult/CurrencyResult";
 
 interface CurrencyState {
   amount: string;
@@ -54,12 +54,6 @@ export const CurrencyCalculate = () => {
     dispatch(fetchPairConversion({ from, to }));
   };
 
-  const displayResult: string | null = rate
-    ? `${currencyState.amount} ${currencyState.from} = ${(
-        rate * Number(currencyState.amount)
-      ).toFixed(2)} ${currencyState.to}`
-    : null;
-
   if (statusLoading === Status.LOADING) {
     return <Loader />;
   }
@@ -69,46 +63,18 @@ export const CurrencyCalculate = () => {
   return (
     <div className={styles.calculateContainer}>
       <h2>Калькулятор валют</h2>
-      <div className={styles.calculateBlock}>
-        <div className={styles.inpBlock}>
-          <Input
-            className={styles.inp}
-            type={"number"}
-            label={"Сумма"}
-            placeholder={"Введите сумму"}
-            value={currencyState.amount}
-            onChange={(e) =>
-              setCurrencyState((prev) => ({ ...prev, amount: e.target.value }))
-            }
-          />
-        </div>
-        <div className={styles.inpBlock}>
-          <SelectS
-            id="from"
-            label="Из"
-            value={currencyState.from}
-            onChange={(e) =>
-              setCurrencyState((prev) => ({ ...prev, from: e.target.value }))
-            }
-            currencies={currencyOptions}
-          />
-        </div>
-        <div className={styles.inpBlock}>
-          <SelectS
-            id="to"
-            label="В"
-            value={currencyState.to}
-            onChange={(e) =>
-              setCurrencyState((prev) => ({ ...prev, to: e.target.value }))
-            }
-            currencies={currencyOptions}
-          />
-        </div>
-      </div>
-      <button className={styles.buttonCalculate} onClick={handleCalculate}>
-        Рассчитать
-      </button>
-      {rate > 0 && <div className={styles.result}>{displayResult}</div>}
+      <CurrencyForm
+        currencyState={currencyState}
+        setCurrencyState={setCurrencyState}
+        currencyOptions={currencyOptions}
+        onCalculate={handleCalculate}
+      />
+      <CurrencyResult
+        amount={currencyState.amount}
+        from={currencyState.from}
+        to={currencyState.to}
+        rate={rate}
+      />
     </div>
   );
 };
