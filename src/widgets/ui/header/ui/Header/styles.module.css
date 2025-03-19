@@ -1,0 +1,20 @@
+.header {
+  background-color: aqua;
+}
+
+.container {
+  height: 10vh;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

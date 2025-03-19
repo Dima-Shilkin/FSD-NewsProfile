@@ -1,0 +1,51 @@
+.weatherContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  overflow: auto;
+  align-items: center;
+}
+
+.weatherInput {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 10px 0px;
+}
+
+.cardWeather {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.cardWeather_left {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.cardWeather_right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.weatherImg {
+  height: 50px;
+  width: 50px;
+}
+
+.tempImg {
+  height: 30px;
+  width: 30px;
+}

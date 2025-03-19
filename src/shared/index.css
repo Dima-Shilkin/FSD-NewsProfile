@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  background: #e5e5e5;
+  height: 100vh;
+  width: 100%;
+}
+
+.navLink {
+  color: rgb(63, 14, 14);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: rgb(179, 101, 101);
+  scale: 1.1;
+}
+
+a.active {
+  color: rgb(105, 130, 99);
+}

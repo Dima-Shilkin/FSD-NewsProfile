@@ -1,0 +1,33 @@
+.card_last_request {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.city_name {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.city_name:hover {
+  color: rgb(137, 38, 38);
+}
+
+.arrow_item {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.arrow_item::after {
+  content: "→";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.arrow_item:hover::after {
+  opacity: 1;
+}

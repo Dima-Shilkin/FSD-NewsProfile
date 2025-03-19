@@ -1,0 +1,9 @@
+.newsList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0px;
+  gap: 15px;
+  overflow: auto;
+  scrollbar-width: none;
+}

@@ -1,0 +1,12 @@
+.logout {
+  color: white;
+  background-color: blue;
+  padding: 4px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout:active {
+  scale: 1.1;
+}

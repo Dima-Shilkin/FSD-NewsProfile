@@ -1,0 +1,14 @@
+.listRates {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.rateItem {
+  font-size: 14px;
+  color: rgb(43, 36, 36);
+}

@@ -1,0 +1,22 @@
+.item {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.description {
+  width: 100%;
+  word-wrap: break-word;
+}
