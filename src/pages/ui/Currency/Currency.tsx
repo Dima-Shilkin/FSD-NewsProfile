@@ -21,13 +21,6 @@ export const Currency = () => {
     useSelector(selectPopularCurrency);
 
   useEffect(() => {
-    const savedBaseCurrency = getBaseCurrencyFromLS();
-    if (savedBaseCurrency) {
-      dispatch(setBaseCurrency(savedBaseCurrency));
-    }
-  }, [dispatch]);
-
-  useEffect(() => {
     if (baseCurrency) {
       dispatch(fetchPopularCurrencies(baseCurrency));
     }

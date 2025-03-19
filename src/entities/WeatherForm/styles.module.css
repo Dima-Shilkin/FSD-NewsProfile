@@ -1,0 +1,8 @@
+.weatherInput {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 10px 0px;
+}

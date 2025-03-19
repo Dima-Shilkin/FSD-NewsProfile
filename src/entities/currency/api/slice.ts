@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit"
 import { CurrencySliceState } from "../model/types"
 import { Status } from "@/shared/interfaces"
 import { fetchCurrenciesList, fetchPairConversion, fetchPopularCurrencies } from "./currencyApi"
+import { getBaseCurrencyFromLS } from "@/shared/helpers/LSforCurrencyPage"
 
 const initialState: CurrencySliceState = {
   popularCurrency: {
-    baseCurrency: "USD",
+    baseCurrency: getBaseCurrencyFromLS() ||
+    "USD",
     currencyData : {},
     statusLoading: Status.IDLE,
     statusError: '',
